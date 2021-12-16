@@ -1,0 +1,59 @@
+body{
+    font-family:'Courier New', Courier, monospace, sans-serif;
+    background: linear-gradient(to right, aqua, rgb(0, 255, 106));
+    padding: 0;
+    margin: 0;
+    
+}
+    
+.calculator-grid{
+    display:grid;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows:minmax(100px, auto) 100px 100px 100px 100px 100px;
+    
+}
+
+.calculator-grid > button {
+    cursor : pointer;
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgb(255,255,255, .60);
+}
+.calculator-grid > button:hover {
+    cursor : pointer;
+    background-color: rgb(255,255,255, .85);
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.output{
+    background-color:rgba(0, 11, 20, 0.863);
+    grid-column: span 4;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px;
+    word-wrap: break-word;    /*this and the following line is to wrap the numbers back to the line search even further */
+    word-break: break-all;
+    font-weight: bolder;
+}
+
+.output .upper{
+    color: rgb(255,255,255, .80);
+    font-size: 20px;
+}
+
+.output .lower{
+    color: rgb(255,255,255);
+    font-size: 30px;
+}
